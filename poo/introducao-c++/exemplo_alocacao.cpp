@@ -34,6 +34,9 @@ void exibeDadosTurma(Aluno * alunos);
 // os alunos da turma
 void cadastraAlunosTurma(Aluno * alunos);  
 
+// calcula a média aritmética das duas notas do aluno
+float calculaMedia(const Aluno & al);
+
 #define N_ALUNOS 3   // número de alunos da turma
 
 int main(void)     // função principal
@@ -77,7 +80,8 @@ void exibeDadosAluno(const Aluno & al)
     // exibindo em tela os campos do aluno (struct Aluno)
     cout << " -> Nome: "   << al.nome << endl
          << " -> Nota 1: " << al.nota1 << endl
-         << " -> Nota 2: " << al.nota2 << endl;
+         << " -> Nota 2: " << al.nota2 << endl
+         << " -> Media: "  << calculaMedia(al);
 
     // al.nota1 = 100;   gera erro porque esta é const
 }
@@ -106,4 +110,10 @@ void cadastraAlunosTurma(Aluno * alunos)
     {
         cadastraAluno(alunos[i]);       // entrada de informações de cada aluno i
     }
+}
+
+// calcula a média aritmética das duas notas do aluno
+float calculaMedia(const Aluno & al)
+{
+    return (al.nota1 + al.nota2) / 2;
 }
