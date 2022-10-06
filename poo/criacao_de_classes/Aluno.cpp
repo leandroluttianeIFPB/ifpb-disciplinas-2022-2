@@ -156,9 +156,10 @@ float Aluno::getNota2()
     return nota2; // retorna valor do atributo
 }
 
+// Método que calcula média aritmética das notas do Aluno
 float Aluno::calcularMedia()
 {
-    return (nota1 + nota2) / 2;
+    return (nota1 + nota2) / 2;  // retorna a média das notas
 }
 
 // Método que exibe em tela o estado do objeto Aluno
