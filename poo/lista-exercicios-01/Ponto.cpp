@@ -1,4 +1,5 @@
 // Arquivo de implementação da classe Ponto
+// Realiza a implementação dos métodos da classe
 
 #include "Ponto.hpp" // include do arquivo de definição da classe
 
