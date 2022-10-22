@@ -9,6 +9,7 @@ using std::cerr;      // utilização de cerr sem uso do termo std
 #define BASE_PADRAO   10     // valor de base padrão do Retangulo
 #define ALTURA_PADRAO 10     // valor de altura padrão do Retangulo
 
+// Definição da classe Retangulo
 class Retangulo
 {
     public:
