@@ -28,17 +28,32 @@ class Retangulo
         void imprimir();        // exibe em tela atributos e características
                                 // do Retangulo    
 
-        static int contRetangulos;   // atributo estatico, contador de objetos
-                                     // da classe (atributo será posteriormente
-                                     // convertido em PRIVADO)
-
         // método estático, calcula área de um retangulo
         // de base b e área a
         static float calculaArea(float b, float a);
     
+        // método estático que retorna o valor do atributo
+        // estático contRetangulo
+        static int getContRetangulos(); 
+
+        ~Retangulo();   // destrutor da classe. Um destrutor deve possuir
+                        // o mesmo nome da classe, precedida de ~
+                        // uma classe possui um único construtor. Ou ele
+                        // é o destrutor padrão, criado pelo compilador e
+                        // que nada realiza, ou ele é o implementado pelo
+                        // desenvolvedor.
+                        // Outro ponto importante é que destrutores não
+                        // possuem parâmetros
+
     private:
         float base;     // base do Retangulo
         float altura;   // altura do Retangulo
+
+        // ao se tornar público, apenas os métodos construtor e
+        // destrutor da classe realizam a alteração do valor 
+        // deste atributo
+        static int contRetangulos;   // atributo estatico, contador de objetos
+                                     // da classe
 };
 
 #endif

@@ -103,11 +103,20 @@ void Retangulo::imprimir()
     return b * a;
 }
 
+// Método estático que retorna o valor do atributo
+// contRetangulos, que é utilizado para contar o
+// número de objetos da classe Retangulo instanciados
+/*static*/ int Retangulo::getContRetangulos()
+{
+    return Retangulo::contRetangulos;
+}
 
-
-
-
-
-
-
+// Destrutor da classe Retangulo
+// Quando um objeto vai ser destruído (deixar de existir)
+// o contador de Retangulos é decrementado em uma unidade
+Retangulo::~Retangulo()
+{
+    // decrementa contador de objetos Retangulo instanciados
+    Retangulo::contRetangulos--;
+}
 
