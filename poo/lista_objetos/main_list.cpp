@@ -34,6 +34,8 @@ int main(void)
 
     int nQuadrado = 1;   // número do quadrado exibido
 
+    listaQuadrados.remove(Quadrado(10));  // remove elementos (se tiver) de lado igual a 10
+
     // for com uso de iterador para percorrer a lista e exibir
     // informações dos objetos (quad é um ponteiro, begin retorna ponteiro para o primeiro,
     // end retorna ponteiro para o último)
